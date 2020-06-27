@@ -11,7 +11,7 @@ export class QuoteListComponent {
   quotes = quotes;
 
   share() {
-    window.alert('The quotes has been tagged!');
+    window.alert('The quote has been tagged!');
   }
 }
 

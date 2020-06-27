@@ -13,7 +13,7 @@ import { QuoteListComponent } from './quote-list/quote-list.component';
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: QuoteListComponent },
+      { path: '', component: ProductListComponent },
     ])
   ],
   declarations: [
