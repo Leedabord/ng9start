@@ -1,7 +1,10 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -19,6 +22,8 @@ import { PolicyListComponent } from './policy-list/policy-list.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
     RouterModule.forRoot([
     //  { path: '', component: ProductListComponent },
       {path: 'crisis-list', component: CrisisListComponent},
@@ -44,7 +49,13 @@ import { PolicyListComponent } from './policy-list/policy-list.component';
 export class AppModule { }
 
 /*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
+
+@NgModule({
+        // [...]
+    imports: [
+        // [...]
+        AngularFireModule.initializeApp(environment.firebaseConfig),
+        AngularFireDatabaseModule
+    ],
+
 */
