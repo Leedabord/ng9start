@@ -6,26 +6,25 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { CategoryComponent } from './categories/category';
+import { QuoteListComponent } from './quote-list/quote-list.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: CategoryComponent },
+      { path: '', component: QuoteListComponent },
     ])
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
-    CategoryComponent,
+    QuoteListComponent,
     ProductListComponent
   ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
-
 
 /*
 Copyright Google LLC. All Rights Reserved.

@@ -16,7 +16,7 @@ export const products = [
   }
 ];
 
-export const categories = [
+export const quotes = [
   {
     name: 'Phone XL',
     price: 799,
