@@ -1,12 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from "@angular/forms";
 
+//import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 
-import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { QuoteListComponent } from './quote-list/quote-list.component';
@@ -49,13 +51,5 @@ import { PolicyListComponent } from './policy-list/policy-list.component';
 export class AppModule { }
 
 /*
-
-@NgModule({
-        // [...]
-    imports: [
-        // [...]
-        AngularFireModule.initializeApp(environment.firebaseConfig),
-        AngularFireDatabaseModule
-    ],
 
 */
