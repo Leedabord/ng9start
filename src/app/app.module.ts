@@ -12,6 +12,7 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
 import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { HeroesListComponent } from './heroes-list/heroes-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MyDBsvcService } from './services/my-dbsvc.service';
 
 @NgModule({
   imports: [
@@ -35,7 +36,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ProductListComponent,
     ProductAlertsComponent
   ],
-  providers: [],
+  providers: [MyDBsvcService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
