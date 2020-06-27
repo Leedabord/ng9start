@@ -6,6 +6,13 @@ import { Policy } from './policy.model';
 @Injectable()
 export class PolicyService {
 
-  constructor() { }
+  constructor(
+    private firestore: AngularFirestore
+    ) { 
+    /
+  }
 
 }
+
+/* export class PolicyService {
+} */
