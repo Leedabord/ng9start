@@ -9,22 +9,35 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { QuoteListComponent } from './quote-list/quote-list.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 
+import { CrisisListComponent } from './crisis-list/crisis-list.component';
+import { HeroesListComponent } from './heroes-list/heroes-list.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
+      {path: 'crisis-list', component: CrisisListComponent},
+      {path: 'heroes-list', component: HeroesListComponent},
+      {path: '', redirectTo: '/heroes-list', pathMatch: 'full'},
+      {path: '**', component: PageNotFoundComponent}
     ])
   ],
   declarations: [
     AppComponent,
+    CrisisListComponent,
+    HeroesListComponent,
+    PageNotFoundComponent,
     TopBarComponent,
     QuoteListComponent,
     ProductListComponent,
     ProductAlertsComponent
   ],
-  bootstrap: [ AppComponent ]
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
 
